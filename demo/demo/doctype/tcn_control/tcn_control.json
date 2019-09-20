@@ -1,0 +1,39 @@
+{
+ "creation": "2019-07-18 22:55:10.390394",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "control_mechanism",
+  "responsibility"
+ ],
+ "fields": [
+  {
+   "fieldname": "control_mechanism",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Control Mechanism",
+   "options": "Control Mechanism",
+   "reqd": 1
+  },
+  {
+   "fieldname": "responsibility",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Responsibility",
+   "options": "Employee",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-07-21 20:29:45.848114",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "TCN Control",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

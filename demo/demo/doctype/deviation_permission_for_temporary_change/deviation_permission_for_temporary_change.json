@@ -1,0 +1,307 @@
+{
+ "autoname": "KT-TCN-.#####",
+ "creation": "2019-07-16 16:51:24.269841",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "part_number",
+  "company",
+  "column_break_3",
+  "date",
+  "part_description",
+  "initiation_department",
+  "section_break_8",
+  "process_name",
+  "alternate",
+  "column_break_11",
+  "safety_requirement",
+  "configuration_item",
+  "section_break_10",
+  "on_process",
+  "column_break_12",
+  "on_procedure",
+  "column_break_14",
+  "step",
+  "column_break_16",
+  "machinery",
+  "column_break_18",
+  "material",
+  "traceability_detail_section",
+  "tcn_traceability_detail",
+  "section_break_22",
+  "reason",
+  "additional_control_section",
+  "control_mechanism",
+  "section_break_26",
+  "tcn_on_component",
+  "masking_detail",
+  "amended_from",
+  "section_break_20",
+  "details",
+  "comments",
+  "status",
+  "tcn_transaction"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "part_number",
+   "fieldtype": "Link",
+   "label": "Part Number",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "configuration_item",
+   "fieldtype": "Select",
+   "label": "Configuration Item",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "safety_requirement",
+   "fieldtype": "Select",
+   "label": "Product or Part safety requirement",
+   "options": "\nYes\nNo"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Deviation Permission for Temporary Change",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "initiation_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Initiation Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "process_name",
+   "fieldtype": "Data",
+   "label": "Process Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break",
+   "label": "Deviation Requested"
+  },
+  {
+   "default": "0",
+   "fieldname": "on_process",
+   "fieldtype": "Check",
+   "label": "Process"
+  },
+  {
+   "default": "0",
+   "fieldname": "on_procedure",
+   "fieldtype": "Check",
+   "label": "Procedure"
+  },
+  {
+   "default": "0",
+   "fieldname": "step",
+   "fieldtype": "Check",
+   "label": "Step"
+  },
+  {
+   "default": "0",
+   "fieldname": "machinery",
+   "fieldtype": "Check",
+   "label": "Machinery"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "material",
+   "fieldtype": "Check",
+   "label": "Material"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Additional controls to be followed during TCN/ build through / build short (Any specific WI,CTQs to be prepared based on deviation requested review). Ensure that the build through and build short assemblies are prevented from further processing beyond the defined stop points.",
+   "fieldname": "details",
+   "fieldtype": "Small Text",
+   "label": "Details"
+  },
+  {
+   "fieldname": "alternate",
+   "fieldtype": "Data",
+   "label": "Alternate / Back up Process as  per FF NPD 31"
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break",
+   "label": "REASON"
+  },
+  {
+   "fieldname": "additional_control_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Control"
+  },
+  {
+   "bold": 1,
+   "fieldname": "control_mechanism",
+   "fieldtype": "Table",
+   "options": "TCN Control",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Table",
+   "options": "TCN Reason",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Masking Detail"
+  },
+  {
+   "depends_on": "eval:doc.tcn_on_component",
+   "fieldname": "masking_detail",
+   "fieldtype": "Table",
+   "label": " ",
+   "options": "TCN Masking Detail",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "If TCN is for material, select component skip/masking detail.",
+   "fieldname": "tcn_on_component",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "traceability_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Traceability Detail"
+  },
+  {
+   "fieldname": "tcn_traceability_detail",
+   "fieldtype": "Table",
+   "label": "  ",
+   "options": "TCN Traceability Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Review / Follow up comments "
+  },
+  {
+   "fetch_from": "part_number.description",
+   "fieldname": "part_description",
+   "fieldtype": "Read Only",
+   "label": "Part Description"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Read Only",
+   "label": "Status",
+   "options": "To Be Confirm\nIn Progress\nClosed"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.status==\"In Progress\"||doc.status==\"Completed\"",
+   "fieldname": "tcn_transaction",
+   "fieldtype": "Table",
+   "label": "TCN Transaction",
+   "options": "TCN Transaction"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-07-21 15:26:57.640534",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "Deviation Permission for Temporary Change",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

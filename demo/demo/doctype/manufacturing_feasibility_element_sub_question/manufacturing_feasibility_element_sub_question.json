@@ -1,0 +1,29 @@
+{
+ "creation": "2019-08-30 14:51:34.479149",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "question"
+ ],
+ "fields": [
+  {
+   "fieldname": "question",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Question",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-08-30 15:05:05.906064",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "Manufacturing Feasibility Element Sub Question",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

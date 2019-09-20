@@ -1,0 +1,60 @@
+{
+ "creation": "2019-07-20 10:31:56.663674",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "tcn_qty",
+  "insp_qty",
+  "cumul_qty",
+  "inspection_result"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tcn_qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "TCN Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "insp_qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Inspection Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cumul_qty",
+   "fieldtype": "Int",
+   "label": "Cumulative Quantity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inspection_result",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Inspection Result",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-07-20 10:31:56.663674",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "TCN Summary",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

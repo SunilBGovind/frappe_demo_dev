@@ -1,0 +1,39 @@
+{
+ "creation": "2019-07-18 22:52:13.924994",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reason",
+  "action_to_correct"
+ ],
+ "fields": [
+  {
+   "fieldname": "reason",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reason",
+   "options": "Reason List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "action_to_correct",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Action to Correct",
+   "options": "TCN Action",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-07-21 20:26:25.428430",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "TCN Reason",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

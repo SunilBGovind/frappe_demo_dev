@@ -1,0 +1,81 @@
+{
+ "creation": "2019-07-11 15:01:37.305993",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "po",
+  "bill_no",
+  "bill_date",
+  "amount",
+  "boxes",
+  "items",
+  "count"
+ ],
+ "fields": [
+  {
+   "fieldname": "po",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "PO Number",
+   "options": "Purchase Order"
+  },
+  {
+   "fieldname": "bill_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Invoice / DC Number",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "bill_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Invoice / DC Date",
+   "reqd": 1
+  },
+  {
+   "default": "0.00",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "options": "currency",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "boxes",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No. of Boxes"
+  },
+  {
+   "default": "0",
+   "fieldname": "items",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No. of Items"
+  },
+  {
+   "default": "1",
+   "fieldname": "count",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Count",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-07-12 13:54:24.723369",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "Gate Register Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

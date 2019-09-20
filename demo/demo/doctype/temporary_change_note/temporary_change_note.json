@@ -1,0 +1,310 @@
+{
+ "autoname": "TCN-.#####",
+ "creation": "2019-07-21 15:27:08.506442",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer",
+  "initiation_department",
+  "column_break_3",
+  "date",
+  "company",
+  "section_break_8",
+  "requested_deviation",
+  "current_process_name",
+  "part_number",
+  "column_break_10",
+  "attachment",
+  "alternate_process",
+  "part_description",
+  "section_break_14",
+  "informed_to_customer",
+  "column_break_16",
+  "safety_req",
+  "column_break_18",
+  "conf_item",
+  "traceability_detail_section",
+  "tcn_traceability_detail",
+  "section_break_22",
+  "reason",
+  "additional_control_section",
+  "control_mechanism",
+  "section_break_26",
+  "tcn_on_component",
+  "masking_detail",
+  "section_break_20",
+  "details",
+  "comments",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "part_number",
+   "fieldtype": "Link",
+   "label": "Part Number",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "part_number.description",
+   "fieldname": "part_description",
+   "fieldtype": "Read Only",
+   "label": "Part Description"
+  },
+  {
+   "fieldname": "initiation_department",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Initiation Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Deviation Requested"
+  },
+  {
+   "fieldname": "traceability_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Traceability Detail"
+  },
+  {
+   "fieldname": "tcn_traceability_detail",
+   "fieldtype": "Table",
+   "label": "  ",
+   "options": "TCN Traceability Detail",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_22",
+   "fieldtype": "Section Break",
+   "label": "REASON"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Table",
+   "options": "TCN Reason",
+   "reqd": 1
+  },
+  {
+   "fieldname": "additional_control_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Control"
+  },
+  {
+   "bold": 1,
+   "fieldname": "control_mechanism",
+   "fieldtype": "Table",
+   "options": "TCN Control",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Masking Detail"
+  },
+  {
+   "default": "0",
+   "description": "If TCN is for material, select component skip/masking detail.",
+   "fieldname": "tcn_on_component",
+   "fieldtype": "Check"
+  },
+  {
+   "depends_on": "eval:doc.tcn_on_component",
+   "fieldname": "masking_detail",
+   "fieldtype": "Table",
+   "label": " ",
+   "options": "TCN Masking Detail",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Details and Review"
+  },
+  {
+   "description": "Additional controls to be followed during TCN/ build through / build short (Any specific WI,CTQs to be prepared based on deviation requested review). Ensure that the build through and build short assemblies are prevented from further processing beyond the defined stop points.",
+   "fieldname": "details",
+   "fieldtype": "Small Text",
+   "label": "Details"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Review / Follow up comments "
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval.doc.status!=\"Draft\"",
+   "fieldname": "status",
+   "fieldtype": "Read Only",
+   "label": "Status",
+   "options": "Draft\nPending\nApproved\nRejected"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Temporary Change Note",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "description": "  ",
+   "fieldname": "requested_deviation",
+   "fieldtype": "Table MultiSelect",
+   "label": "Deviation Requested On",
+   "options": "TCN Request List",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Is this informed to Customer?",
+   "fieldname": "informed_to_customer",
+   "fieldtype": "Check"
+  },
+  {
+   "default": "0",
+   "description": "Is this ensure the Product safety requirement ?",
+   "fieldname": "safety_req",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": " /private/files/FF NPD 31.xls\n",
+   "fieldname": "attachment",
+   "fieldtype": "Attach Image",
+   "in_preview": 1,
+   "label": "Refer FF NPD 31 to know List of Manufacturing Processes",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "current_process_name",
+   "fieldtype": "Link",
+   "label": "Current Process Name",
+   "options": "Operation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "alternate_process",
+   "fieldtype": "Link",
+   "label": "Alternate / Back Up Process Name",
+   "options": "Operation",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "description": "Is this affect on Configruation of Item",
+   "fieldname": "conf_item",
+   "fieldtype": "Check"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-07-23 19:53:38.376055",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "Temporary Change Note",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "TCN User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Quality Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

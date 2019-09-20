@@ -1,0 +1,56 @@
+{
+ "creation": "2019-09-05 23:24:49.553237",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "risk_element",
+  "action_point",
+  "responsibility",
+  "target_date"
+ ],
+ "fields": [
+  {
+   "columns": 4,
+   "fieldname": "risk_element",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Risk Element",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "action_point",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Action Point",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "responsibility",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Responsibility",
+   "options": "Employee"
+  },
+  {
+   "columns": 2,
+   "fieldname": "target_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Target Date"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-09-12 11:40:56.781516",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "Risk Mitigation Plan List",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

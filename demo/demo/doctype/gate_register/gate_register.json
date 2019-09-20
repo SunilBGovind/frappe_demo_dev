@@ -1,0 +1,238 @@
+{
+ "autoname": "KT-GR-.#####",
+ "creation": "2019-07-08 18:40:46.533573",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "register_type",
+  "type",
+  "company",
+  "gate_name",
+  "column_break_3",
+  "posting_date",
+  "posting_time",
+  "handover_to",
+  "consignment_detail",
+  "category",
+  "consignement_from",
+  "party_name",
+  "column_break_10",
+  "mode_of_transport",
+  "person_name",
+  "currency",
+  "details",
+  "gate_register_detail",
+  "remarks",
+  "totals",
+  "column_break_19",
+  "total_invoices",
+  "total_boxes",
+  "total_amount",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "register_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Register Type",
+   "options": "\nInward\nOutward",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "description": "Time at which materials were received",
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "label": "Posting Time",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "\nWith PO\nWithout PO\nJob Work\nFree Sample\nSales Return\nMisc Item\nOthers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mode_of_transport",
+   "fieldtype": "Select",
+   "label": "Mode of Transport",
+   "options": "\nBy Courier\nBy Hand\nBy Bus\nOthers",
+   "reqd": 1
+  },
+  {
+   "fieldname": "person_name",
+   "fieldtype": "Data",
+   "label": "Person Name"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gate_register_detail",
+   "fieldtype": "Table",
+   "label": "Gate Register Detail",
+   "options": "Gate Register Detail",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.status!=\"Draft\";",
+   "fieldname": "handover_to",
+   "fieldtype": "Dynamic Link",
+   "label": "Handover To",
+   "options": "type"
+  },
+  {
+   "description": "Define Material Package Condition",
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "totals",
+   "fieldtype": "Section Break",
+   "options": "fa fa-money"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "options": "currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Gate Register",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "gate_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Gate Name",
+   "options": "Gate"
+  },
+  {
+   "fieldname": "consignment_detail",
+   "fieldtype": "Section Break",
+   "label": "CONSIGNMENT DETAILS"
+  },
+  {
+   "fetch_from": "Supplier.currency",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "consignement_from",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Party Type",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "party_name",
+   "fieldtype": "Dynamic Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Party Name",
+   "options": "consignement_from"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "total_invoices",
+   "fieldtype": "Read Only",
+   "label": "Total Invoices",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_boxes",
+   "fieldtype": "Int",
+   "label": "Total Boxes",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Draft",
+   "depends_on": "eval:doc.status!=\"Draft\";",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Register Status",
+   "options": "Draft\nReceived\nHanded Over",
+   "read_only": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "DocType"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-07-13 17:35:14.054294",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "Gate Register",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

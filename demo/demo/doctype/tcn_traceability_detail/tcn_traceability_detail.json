@@ -1,0 +1,86 @@
+{
+ "creation": "2019-07-18 23:34:09.730132",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "stage",
+  "work_order",
+  "qty",
+  "from_slno",
+  "to_slno",
+  "effective_from",
+  "effective_to"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "stage",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Stage",
+   "options": "Stage",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qty",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "from_slno",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "From Sl No",
+   "reqd": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "to_slno",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "To Sl No",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "effective_from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Eff. From Date",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "effective_to",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Eff. To Date",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "work_order",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Work Order",
+   "options": "Work Order",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-07-23 19:53:12.298154",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "TCN Traceability Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

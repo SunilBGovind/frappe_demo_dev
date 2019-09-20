@@ -1,0 +1,72 @@
+{
+ "creation": "2019-08-24 15:29:39.322181",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "element",
+  "opportunity_stage",
+  "opportunity_remarks",
+  "order_handling_stage",
+  "order_handling_remark",
+  "can_delete"
+ ],
+ "fields": [
+  {
+   "columns": 3,
+   "fieldname": "element",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Element",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "opportunity_stage",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Yes/No",
+   "options": "\nYes\nNo"
+  },
+  {
+   "columns": 2,
+   "fieldname": "opportunity_remarks",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Opportunity Remarks"
+  },
+  {
+   "columns": 1,
+   "fieldname": "order_handling_stage",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Yes/No",
+   "options": "\nYes\nNo"
+  },
+  {
+   "columns": 2,
+   "fieldname": "order_handling_remark",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Handling Remark"
+  },
+  {
+   "default": "0",
+   "fieldname": "can_delete",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Can Delete"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-09-01 13:11:10.333988",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "Manufacturing Feasibility Element List",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,167 @@
+{
+ "autoname": "KAY-KT.#####",
+ "creation": "2019-07-03 19:06:11.181118",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "location",
+  "order_details",
+  "purpose_order",
+  "column_break_2",
+  "future_order",
+  "date_time",
+  "order_details_section",
+  "order",
+  "section_break_8",
+  "ordering_by",
+  "other_details_section",
+  "column_break_7",
+  "status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Location",
+   "options": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "order_details_section",
+   "fieldtype": "Section Break",
+   "label": "FOOD DETAILS",
+   "options": "fa fa-tag\n"
+  },
+  {
+   "columns": 1,
+   "fieldname": "order",
+   "fieldtype": "Table",
+   "options": "Food Order Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "other_details_section",
+   "fieldtype": "Section Break",
+   "label": "OTHER DETAILS"
+  },
+  {
+   "default": "0",
+   "fieldname": "future_order",
+   "fieldtype": "Check",
+   "label": "Future Oder"
+  },
+  {
+   "depends_on": "before_submit;",
+   "fieldname": "order_details",
+   "fieldtype": "Text Editor",
+   "label": "Order Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "ordering_by",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Ordering By",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.future_order",
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Required Time"
+  },
+  {
+   "fieldname": "purpose_order",
+   "fieldtype": "Data",
+   "label": "Purpose of Order",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Food Order",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Pending\nPreparing\nOut for Delivery\nDelivered\nArchived",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-08-30 14:26:50.142115",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "Kaynes Kitchen",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Kitchen User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Kitchen Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "ordering_by",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

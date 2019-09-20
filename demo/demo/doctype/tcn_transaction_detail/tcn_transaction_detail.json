@@ -1,0 +1,62 @@
+{
+ "creation": "2019-07-23 17:19:15.697731",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "inspection_date",
+  "inspection_quatity",
+  "card_serial_no",
+  "product_serial_no",
+  "result"
+ ],
+ "fields": [
+  {
+   "default": "Today",
+   "fieldname": "inspection_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Inspection Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "inspection_quatity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Inspection Quantity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "card_serial_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Card Serial No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "product_serial_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Product Serial No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Result",
+   "options": "Ok\nNot Ok"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-07-23 17:40:40.060272",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "TCN Transaction Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

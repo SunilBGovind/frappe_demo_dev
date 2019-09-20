@@ -1,0 +1,19 @@
+{% extends "templates/web.html" %}
+
+{% block breadcrumbs %}
+    {% include "templates/includes/breadcrumbs.html" %}
+{% endblock %}
+
+{% block header %}
+<h1>{{ agenda }}</h1>
+{% endblock %}
+
+{% block page_content %}
+
+<div>{{ customer_name }}</div>
+
+<!-- <a class='btn btn-primary'
+    href='/job_application?job_title={{ doc.job_title }}'>
+    {{ _("Apply Now") }}</a>
+ -->
+{% endblock %}

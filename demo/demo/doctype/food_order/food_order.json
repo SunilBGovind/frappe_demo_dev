@@ -1,0 +1,150 @@
+{
+ "autoname": "KT-ORD-.#####",
+ "creation": "2019-06-29 00:55:00.489837",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "location",
+  "column_break_2",
+  "order_details_section",
+  "order",
+  "other_details_section",
+  "future_order",
+  "ordering_by",
+  "column_break_7",
+  "date_time",
+  "purpose_order",
+  "order_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "label": "Location",
+   "options": "Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "order_details_section",
+   "fieldtype": "Section Break",
+   "label": "FOOD DETAILS",
+   "options": "fa fa-tag\n"
+  },
+  {
+   "fieldname": "order",
+   "fieldtype": "Table",
+   "options": "Food Order Item"
+  },
+  {
+   "fieldname": "other_details_section",
+   "fieldtype": "Section Break",
+   "label": "OTHER DETAILS"
+  },
+  {
+   "default": "0",
+   "fieldname": "future_order",
+   "fieldtype": "Check",
+   "label": "Future Oder"
+  },
+  {
+   "fieldname": "ordering_by",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "label": "Ordering By",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.future_order",
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "label": "Required Time"
+  },
+  {
+   "fieldname": "purpose_order",
+   "fieldtype": "Data",
+   "label": "Purpose of Order",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "order_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Order Status",
+   "options": "Pending\nPreparing\nOut for Delivery\nDelivered\nArchived",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Food Order",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-07-07 00:15:06.348798",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "Food Order",
+ "name_case": "Title Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Kitchen User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Kitchen Manager",
+   "share": 1
+  }
+ ],
+ "search_fields": "ordering_by",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

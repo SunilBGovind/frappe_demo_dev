@@ -1,0 +1,233 @@
+{
+ "autoname": "CRM-MP-.####",
+ "creation": "2019-09-03 13:11:14.860522",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "risk_analysis",
+  "column_break_2",
+  "customer",
+  "risk_element_content",
+  "risk_mitigation_plan_list",
+  "section_11",
+  "marketing",
+  "purchase",
+  "production",
+  "column_break_33",
+  "marketing_name",
+  "purchase_name",
+  "production_name",
+  "column_break_14",
+  "quality",
+  "engineering",
+  "column_break_35",
+  "quality_name",
+  "engineering_name",
+  "column_break_20",
+  "commercial",
+  "technical_head",
+  "column_break_39",
+  "commercial_name",
+  "technical_head_name",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_from": "risk_analysis.customer",
+   "fieldname": "customer",
+   "fieldtype": "Read Only",
+   "label": "Customer"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "risk_element_content",
+   "fieldtype": "Section Break",
+   "label": " "
+  },
+  {
+   "fieldname": "section_11",
+   "fieldtype": "Section Break",
+   "label": "CFT Team Members"
+  },
+  {
+   "fieldname": "marketing",
+   "fieldtype": "Link",
+   "label": "Marketing",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "commercial",
+   "fieldtype": "Link",
+   "label": "Commercial",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_33",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purchase",
+   "fieldtype": "Link",
+   "label": "Purchase",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quality",
+   "fieldtype": "Link",
+   "label": "Quality",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "engineering",
+   "fieldtype": "Link",
+   "label": "Engineering",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "production",
+   "fieldtype": "Link",
+   "label": "Production",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_39",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "technical_head",
+   "fieldtype": "Link",
+   "label": "Technical Head",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Risk Mitigation Plan",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "risk_analysis",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Risk Analysis",
+   "options": "Risk Analysis",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "risk_mitigation_plan_list",
+   "fieldtype": "Table",
+   "label": " ",
+   "options": "Risk Mitigation Plan List",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "marketing.first_name",
+   "fieldname": "marketing_name",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "purchase.first_name",
+   "fieldname": "purchase_name",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "production.first_name",
+   "fieldname": "production_name",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "quality.first_name",
+   "fieldname": "quality_name",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "engineering.first_name",
+   "fieldname": "engineering_name",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "commercial.first_name",
+   "fieldname": "commercial_name",
+   "fieldtype": "Data",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "technical_head.first_name",
+   "fieldname": "technical_head_name",
+   "fieldtype": "Data",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-09-14 11:43:17.330864",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "Risk Mitigation Plan",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}

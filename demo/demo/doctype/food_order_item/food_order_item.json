@@ -1,0 +1,51 @@
+{
+ "creation": "2019-06-29 01:05:55.045866",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "food_name",
+  "column_break_2",
+  "no_of_peoples",
+  "price"
+ ],
+ "fields": [
+  {
+   "fieldname": "food_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Food Name",
+   "options": "Food Menu",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_of_peoples",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No. of Peoples",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fetch_from": "food_name.price",
+   "fieldname": "price",
+   "fieldtype": "Read Only",
+   "label": "Price"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-08-10 15:48:24.485713",
+ "modified_by": "Administrator",
+ "module": "demo",
+ "name": "Food Order Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
