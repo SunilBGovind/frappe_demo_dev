@@ -1,0 +1,37 @@
+{
+ "creation": "2019-12-13 15:31:50.414265",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nre_charge",
+  "value"
+ ],
+ "fields": [
+  {
+   "fieldname": "value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Value",
+   "precision": "2"
+  },
+  {
+   "fieldname": "nre_charge",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "NRE Charge",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-12-13 18:21:42.365598",
+ "modified_by": "Administrator",
+ "module": "N-Selling",
+ "name": "NRE Charge Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

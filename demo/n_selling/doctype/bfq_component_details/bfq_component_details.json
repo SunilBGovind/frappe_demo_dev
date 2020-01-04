@@ -1,0 +1,137 @@
+{
+ "creation": "2019-12-13 10:36:30.528529",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "part_number",
+  "part_description",
+  "raw_material_cost",
+  "operating_cost",
+  "scrap_cost",
+  "freight_and_insurance",
+  "inventory_carrying_cost",
+  "packing_cost",
+  "consumable_cost",
+  "overheads",
+  "margin",
+  "proposed_selling_price",
+  "ex_works_price",
+  "commission",
+  "freight_out_charges",
+  "total_selling_price"
+ ],
+ "fields": [
+  {
+   "fieldname": "part_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Part Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "part_description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Part Description"
+  },
+  {
+   "fieldname": "raw_material_cost",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Raw Material Cost",
+   "precision": "2"
+  },
+  {
+   "fieldname": "operating_cost",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Operating Cost",
+   "precision": "2"
+  },
+  {
+   "fieldname": "scrap_cost",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Scrap Cost",
+   "precision": "2"
+  },
+  {
+   "fieldname": "freight_and_insurance",
+   "fieldtype": "Float",
+   "label": "Freight and Insurance",
+   "precision": "2"
+  },
+  {
+   "fieldname": "inventory_carrying_cost",
+   "fieldtype": "Float",
+   "label": "Inventory Carrying Cost",
+   "precision": "2"
+  },
+  {
+   "fieldname": "packing_cost",
+   "fieldtype": "Float",
+   "label": "Packing Cost",
+   "precision": "2"
+  },
+  {
+   "fieldname": "consumable_cost",
+   "fieldtype": "Float",
+   "label": "Consumable Cost",
+   "precision": "2"
+  },
+  {
+   "fieldname": "overheads",
+   "fieldtype": "Float",
+   "label": "Overheads",
+   "precision": "2"
+  },
+  {
+   "fieldname": "margin",
+   "fieldtype": "Float",
+   "label": "Margin",
+   "precision": "2"
+  },
+  {
+   "fieldname": "proposed_selling_price",
+   "fieldtype": "Float",
+   "label": "Proposed Selling price",
+   "precision": "2"
+  },
+  {
+   "fieldname": "ex_works_price",
+   "fieldtype": "Float",
+   "label": "Ex Works Price",
+   "precision": "2"
+  },
+  {
+   "fieldname": "commission",
+   "fieldtype": "Float",
+   "label": "Commission",
+   "precision": "2"
+  },
+  {
+   "fieldname": "freight_out_charges",
+   "fieldtype": "Float",
+   "label": "Freight Out Charges",
+   "precision": "2"
+  },
+  {
+   "fieldname": "total_selling_price",
+   "fieldtype": "Float",
+   "label": "Total Selling Price",
+   "precision": "2"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-12-13 10:55:29.943199",
+ "modified_by": "Administrator",
+ "module": "N-Selling",
+ "name": "BFQ Components",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

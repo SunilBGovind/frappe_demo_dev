@@ -1,0 +1,146 @@
+{
+ "creation": "2019-12-12 16:47:52.067468",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "opportunity_no",
+  "customer_name",
+  "address",
+  "column_break_5",
+  "opportunity_date",
+  "expected_quote_date",
+  "contact",
+  "currency",
+  "section_break_9",
+  "bfq_component",
+  "total_selling_price",
+  "section_break_11",
+  "nre_charge",
+  "total_nre_charges",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "opportunity_no",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Opportunity No",
+   "options": "Opportunity",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "Opportunity.transaction_date",
+   "fieldname": "opportunity_date",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Opportunity Date"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "expected_quote_date",
+   "fieldtype": "Date",
+   "label": "Expected Quote Date"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Basis For Quotation",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bfq_component",
+   "fieldtype": "Table",
+   "label": "BFQ Component",
+   "options": "BFQ Component Details"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nre_charge",
+   "fieldtype": "Table",
+   "label": "NRE Charges",
+   "options": "NRE Charge Details"
+  },
+  {
+   "fieldname": "total_selling_price",
+   "fieldtype": "Read Only",
+   "label": "Total Selling Price",
+   "precision": "2"
+  },
+  {
+   "fieldname": "total_nre_charges",
+   "fieldtype": "Read Only",
+   "label": "Total NRE Charges",
+   "precision": "2"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": " Remarks"
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2019-12-13 17:58:58.204017",
+ "modified_by": "Administrator",
+ "module": "N-Selling",
+ "name": "Basis For Quotation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
